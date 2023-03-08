@@ -19,3 +19,9 @@ p1.setValor(30M);
 p1.setDescricao("mouse Razer");
 
 Console.WriteLine(p1.getDescricao()+ " " + p1.getValor());
+
+//cliente , 
+
+Cliente c1 = new Cliente(1," Cliente : Carlos Eduardo "," 32524444" );
+
+Console.WriteLine(c1.getId() + c1.getNome() + "Telefone:" + c1.getTelefone());
