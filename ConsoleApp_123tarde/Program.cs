@@ -84,8 +84,8 @@ List<Cliente> lsCliente = new List<Cliente>();
 
 for (int i = 1; i <= 250; i++)
 {
-    Endereco e = new Endereco(1, "Rua ", "160909090","1"," ", "");
-    Cliente c = new Cliente(i, "Kadhz "+i, "16090909"+i, e1);
+    Endereco e = new Endereco(1, "Rua ", "1 60909090 "," 1 "," Meu pau ", " São Paulo ");
+    Cliente c = new Cliente(i, "Kadhz "+i, "16090909 "+i, e);
     lsCliente.Add(c);
 
 }
