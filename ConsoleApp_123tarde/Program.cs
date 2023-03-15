@@ -1,8 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using ConsoleApp_123tarde;
-
-
-
+using ConsoleApp_123tarde.Heranca;
+using Microsoft.VisualBasic;
 
 Produto p1 = new Produto(1, "Mouse paraguai", 10.90M);
 Produto p2 = new Produto(2, "Teclado lenovo", 20.90M);
@@ -34,3 +33,64 @@ c1.GetEndereco().setRua(" Prudente de Morais ");
 Console.WriteLine(c1.GetEndereco().EnderecoCompleto());
 c1.GetEndereco().AtualizarEndereco(" Julio de Moraes ", " 585 ", " Rua Augusta ");
 Console.WriteLine(c1.GetEndereco().EnderecoCompleto());
+
+
+Carro car = new Carro();
+car.cor = "vermelho";
+car.quantidadedeRodas = 4;
+car.quantidadedeAcentos = 5;
+car.TemMotor = true;
+
+Bicicleta bicicleta = new Bicicleta();
+bicicleta.cor = "Azul";
+bicicleta.quantidadedeRodas = 2;
+bicicleta.quantidadedeAcentos = 1;
+bicicleta.TemMotor = false;
+
+Aviao avinhao = new Aviao();
+avinhao.cor =  "branco";
+avinhao.quantidadedeRodas = 18;
+avinhao.quantidadedeAcentos = 158;
+avinhao.TemMotor = true;
+
+List<Veiculo> veiculoLista = new List<Veiculo>();
+veiculoLista.Add(car);
+veiculoLista.Add(avinhao);
+veiculoLista.Add(bicicleta);
+
+foreach (var item in veiculoLista)
+{
+    Console.WriteLine("Qtd itens da lista " + veiculoLista.Count);
+}
+
+//crie uma lista de produtos com 400 produtos 
+//outra lista de clientes com 250 clientes
+
+Random rand = new Random();
+List<Produto> lsProduto = new List<Produto>();
+
+for (int i = 1; i< rand.Next(200,500); i++)
+{
+    Produto p = new Produto(i, "Produto tal " + i, i / 2 * 15);
+    lsProduto.Add(p);
+}
+
+foreach (var item in lsProduto)
+{
+    Console.WriteLine(item.ExibirProdutos());
+}
+
+List<Cliente> lsCliente = new List<Cliente>();
+
+for (int i = 1; i <= 250; i++)
+{
+    Endereco e = new Endereco(1, "Rua ", "160909090","1"," ", "");
+    Cliente c = new Cliente(i, "Kadhz "+i, "16090909"+i, e1);
+    lsCliente.Add(c);
+
+}
+foreach(var item in lsCliente)
+{
+    Console.WriteLine(item.ExibirCliente());
+}
+

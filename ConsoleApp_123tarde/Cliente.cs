@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -53,6 +54,10 @@ namespace ConsoleApp_123tarde
         public Endereco GetEndereco()
         {
             return Endereco;
+        }
+        public string ExibirCliente()
+        {
+            return Nome + "telefone" + Telefone + Endereco.EnderecoCompleto();
         }
     }
 }

@@ -51,8 +51,10 @@ namespace ConsoleApp_123tarde
         {
             Valor = valor;  
         }
-
-
+        public string ExibirProdutos()
+        {
+            return "Descricao" + Descricao + "R$: " + Valor;
+        }
     }
 }
 
