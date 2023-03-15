@@ -11,11 +11,11 @@ namespace ConsoleApp_123tarde
         public int Id;
         public string Cep;
         public string Rua;
-        public int Numero;
+        public string Numero;
         public string Bairro;
         public string Cidade;
 
-        public Endereco(int id, string cep, string rua, int numero, string bairro, string cidade)
+        public Endereco(int id, string cep, string rua, string numero, string bairro, string cidade)
         {
             Id = id;
             Cep = cep;
@@ -24,6 +24,12 @@ namespace ConsoleApp_123tarde
             Bairro = bairro;
             Cidade = cidade;
         }
+      
+        public string EnderecoCompleto()
+        {
+            return "Rua" + Rua + ", N° " + Numero + " Bairro " + Bairro + "Cidade: " + Cidade;
+        }
+
         public int getId()
         {
             return Id;
@@ -36,7 +42,7 @@ namespace ConsoleApp_123tarde
         {
             return Rua;
         }
-        public int getNumero()
+        public string getNumero()
         {
             return Numero;
         }
@@ -61,7 +67,7 @@ namespace ConsoleApp_123tarde
         {
             Rua = rua;
         }
-        public void setNumero(int numero)
+        public void setNumero(string numero)
         {
             Numero = numero;
         }
@@ -73,7 +79,12 @@ namespace ConsoleApp_123tarde
         {
             Cidade = cidade;
         }
-
+        public void AtualizarEndereco(string rua, string numero, string bairro)
+        {
+            setBairro(bairro);
+            setNumero(numero);
+            setRua(rua);
+        }
     }
 
 }

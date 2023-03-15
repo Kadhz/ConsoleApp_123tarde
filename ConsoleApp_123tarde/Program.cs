@@ -1,24 +1,36 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using ConsoleApp_123tarde;
 
-Produto p1 = new Produto(1,"mouse xing ling", 10.90M);
-Produto p2 = new Produto(2, "Teclado Redragon", 100M);
+
+
+
+Produto p1 = new Produto(1, "Mouse paraguai", 10.90M);
+Produto p2 = new Produto(2, "Teclado lenovo", 20.90M);
 
 Console.WriteLine(p1.getDescricao() + " " + p1.getValor());
 
-p1.setValor(30M);
-p1.setDescricao("mouse Razer");
+p1.setValor(29.90M);
+p1.setDescricao("Mouse Razer");
 
-Console.WriteLine(p1.getDescricao()+ " " + p1.getValor());
+Console.WriteLine(p1.getDescricao() + " " + p1.getValor());
 
-//cliente , 
+Endereco e1 = new Endereco(1,
+    " 15906304",
+    " Mario Miziara",
+    " 91",
+    " Sobral",
+    " Taquaritinga"
+    );
 
-Cliente c1 = new Cliente(1," Cliente : Carlos Eduardo "," 32524444" );
+Cliente c1 = new Cliente(1, "Fernando", "991340447", e1);
+Cliente c2 = new Cliente(2, "Victoria", "991340447", e1);
+Cliente c3 = new Cliente(3, "Rafael", "991340447", e1);
+Cliente c4 = new Cliente(4, "Lucas", "9913409876", e1);
+Cliente c5 = new Cliente(5, "Eduardo", "991340447", e1);
 
-Console.WriteLine(c1.getId() + c1.getNome() + "Telefone:" + c1.getTelefone());
 
-//endereco
-
-Endereco e1 = new Endereco(1, "1590000", "rua Teixeira Pinto", 147, " Jardim Ramos ", "Taquaritinga");
-
-Console.WriteLine(e1.getId() + " Cep: " + e1.getCep() + " Rua: " + e1.getRua() + "Numero: " + e1.getNumero() + " Bairro: " + e1.getBairro() + " Cidade: " + e1.getCidade());
+Console.WriteLine(c1.GetEndereco().EnderecoCompleto());
+c1.GetEndereco().setRua(" Prudente de Morais ");
+Console.WriteLine(c1.GetEndereco().EnderecoCompleto());
+c1.GetEndereco().AtualizarEndereco(" Julio de Moraes ", " 585 ", " Rua Augusta ");
+Console.WriteLine(c1.GetEndereco().EnderecoCompleto());

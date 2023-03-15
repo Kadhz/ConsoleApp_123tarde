@@ -11,15 +11,16 @@ namespace ConsoleApp_123tarde
         public int Id;
         public string Nome;
         public string Telefone;
+        public Endereco Endereco;
 
 
 
-        public Cliente(int id, string nome, string telefone)
+        public Cliente(int id, string nome, string telefone, Endereco endereco)
         {
             Id = id;
             Nome = nome;
             Telefone = telefone;
-
+            Endereco = endereco;
         }
         public int getId()
         {
@@ -49,6 +50,9 @@ namespace ConsoleApp_123tarde
             Telefone = telefone;
         }
 
-
+        public Endereco GetEndereco()
+        {
+            return Endereco;
+        }
     }
 }
